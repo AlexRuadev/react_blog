@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import './style.css';
 
 export default function Navbar () {
@@ -9,7 +10,6 @@ export default function Navbar () {
 
 	const submitSearch = e => {
 		e.preventDefault();
-		alert('Searched');
 	};
 
 	// We set setSearch function to True while the function is triggered (on searchIcon image click)
@@ -24,16 +24,16 @@ export default function Navbar () {
 		<div className='navbar'>
 			<ul className='navbarMenu'>
 				<li>
-					<a href='#'>Home</a>
+					<NavLink to='/'>Home</NavLink>
 				</li>
 				<li>
-					<a href='#'>About us</a>
+					<NavLink to='/about-us'>About us</NavLink>
 				</li>
 				<li>
-					<a href='#'>Posts</a>
+					<NavLink to='/post'>Posts</NavLink>
 				</li>
 				<li>
-					<a href='#'>Contact Us</a>
+					<NavLink to='/contact-us'>Contact Us</NavLink>
 				</li>
 			</ul>
 			<div className='search'>

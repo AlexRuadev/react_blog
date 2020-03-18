@@ -29,3 +29,25 @@
     align-items: center;
     margin: 0 10px;
 }
+
+.searchForm {
+    display: flex;
+}
+
+.searchInput {
+    border: 0;
+    width: 0;
+    transition: width 0.2s ease-in;
+}
+
+.searchInput.active {
+    width: 150px;
+}
+
+.searchInput:focus {
+    outline: none;
+}
+
+.searchIcon {
+    cursor: pointer;
+}

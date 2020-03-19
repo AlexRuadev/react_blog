@@ -11,11 +11,16 @@ function Sidebar () {
 	] = useState([]);
 
 	// we need to past post as a second parameter for performance, so it loads only when the post changes
-	useEffect(() => {
-		// Get our post if our find post.id match with postId
-		const posts = blogPost.data;
-		setPosts(posts);
-	}, posts);
+	useEffect(
+		() => {
+			// Get our post if our find post.id match with postId
+			const posts = blogPost.data;
+			setPosts(posts);
+		},
+		[
+			posts
+		]
+	);
 
 	return (
 		<div className='sidebarContainer'>
@@ -50,7 +55,7 @@ function Sidebar () {
 					{/* map to loop on our posts array, declared at the beginning of our funtion */}
 					{posts.map(post => {
 						return (
-							<NavLink to={`/post/${post.id}`}>
+							<NavLink key={post.id} to={`/post/${post.id}`}>
 								<div className='recentPost'>
 									<h3 className='recentPostTitle'>{post.blogTitle}</h3>
 									<span className='datePost'>

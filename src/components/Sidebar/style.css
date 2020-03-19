@@ -1,4 +1,61 @@
-.sidebar {
+.sidebarContainer {
     width: 27%;
-    background-color: #fff;
+    /* background-color: #fff; */
+}
+
+.cardHeader {
+    text-transform: uppercase;
+    font-size: 15px;
+    text-align: center;
+    box-sizing: border-box;
+    letter-spacing: 2px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.profileImageContainer {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.profileImageContainer img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.personalBio {
+    font-style: 14px;
+    color: #565673;
+    font-weight: 300;
+}
+
+.recentPost {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px;
+}
+
+.recentPosts {
+    padding: 20px 0;
+}
+
+.recentPostTitle {
+    color: #6c6c6c;
+    letter-spacing: 1px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.datePost {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    color: #6c6c6c;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 10px;
+    margin: 0;
+}
+
+.datePost img {
+    margin-right: 5px;
 }

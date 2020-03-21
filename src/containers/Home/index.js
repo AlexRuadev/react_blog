@@ -33,6 +33,7 @@ function ImageGallery (props) {
 }
 
 function Home (props) {
+	const slug = props.match.params.slug;
 	const galleryHeight = 450;
 	const galleryStyle = {
 		height   : galleryHeight + 'px',

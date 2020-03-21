@@ -19,25 +19,25 @@ function BlogPost (props) {
 	});
 
 	const [
-		postId,
-		setPostId
+		slug,
+		setSlug
 	] = useState('');
 
 	// we need to past post as a second parameter for performance, so it loads only when the post changes
 	useEffect(
 		() => {
 			// store our postId in a const. we have access to datas because we passed ...props in our Post component
-			const postId = props.match.params.postId;
+			const slug = props.match.params.slug;
 			// console.log(blogPost);
 
 			// Get our post if our find post.id match with postId
-			const post = blogPost.data.find(post => post.id == postId);
+			const post = blogPost.data.find(post => post.slug == slug);
 			setPost(post);
-			setPostId(postId);
+			setSlug(slug);
 		},
 		[
 			post,
-			props.match.params.postId
+			props.match.params.slug
 		]
 	);
 

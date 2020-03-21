@@ -4,14 +4,16 @@ import Card from '../../components/UI/Card';
 import Navbar from '../../components/Navbar';
 import BlogPost from '../../components/BlogPost';
 import Sidebar from '../../components/Sidebar';
+import Layout from '../../components/Layout';
 
 function Post (props) {
 	return (
-		<section className='container'>
-			{/* Pass props to get our data on our blogPost */}
-			<BlogPost {...props} />
-			<Sidebar />
-		</section>
+		<div>
+			<Layout>
+				{/* Pass props to get our data on our blogPost */}
+				<BlogPost {...props} />{' '}
+			</Layout>
+		</div>
 	);
 }
 

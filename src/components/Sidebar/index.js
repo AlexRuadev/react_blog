@@ -55,7 +55,7 @@ function Sidebar () {
 					{/* map to loop on our posts array, declared at the beginning of our funtion */}
 					{posts.map(post => {
 						return (
-							<NavLink key={post.id} to={`/post/${post.id}`}>
+							<NavLink key={post.id} to={`/post/${post.slug}`}>
 								<div className='recentPost'>
 									<h3 className='recentPostTitle'>{post.blogTitle}</h3>
 									<span className='datePost'>
